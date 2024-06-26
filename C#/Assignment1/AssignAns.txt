@@ -1,0 +1,76 @@
+﻿
+Test your Knowledge
+1. What type would you choose for the following “numbers”?
+    A person’s telephone number
+string PhNo = "5628377729";
+
+    A person’s height
+double height = 5.9; // example in feet
+
+    A person’s age
+int age = 30;
+
+    A person’s gender (Male, Female, Prefer Not To Answer)
+enum Gender { Male, Female, PreferNotToAnswer }
+Gender gender = Gender.Male;
+
+    A person’s salary
+decimal salary = 50000.00m;
+
+    A book’s ISBN
+string isbn = "978-3-16-148410-0";
+
+    A book’s price
+decimal price = 29.99m;
+
+A book’s shipping weight
+double shippingWeight = 1.5;
+A country’s population
+long population = 331002651;
+
+The number of stars in the universe
+ulong numberOfStars = 10000000000000000000;
+
+The number of employees in each of the small or medium businesses in the
+United Kingdom (up to about 50,000 employees per business)
+int numberOfEmployees = 50000;
+
+Output the number of employees
+Console.WriteLine("The number of employees is: " + numberOfEmployees);
+
+
+
+2.What are the difference between value type and reference type variables? What is
+boxing and unboxing?
+
+Value Type
+Storage: Value types directly contain their data. The memory is allocated on the stack.
+Examples: int, float, double, char, struct, enum.
+Behavior: When a value type variable is assigned to another variable, a copy of the value is made. They are independent of each other.
+Reference Type
+Storage: Reference types store references to their data (objects). The actual data is stored on the heap, and the reference is stored on the stack.
+Examples: class, string, array, delegate, interface.
+Behavior: When a reference type variable is assigned to another variable, both variables point to the same object in memory. Changes made through one variable reflect in the other.
+Boxing
+Definition: Boxing is the process of converting a value type to a reference type by wrapping the value inside an object or any interface type implemented by this value type.
+Unboxing
+Definition: Unboxing is the process of extracting the value type from the object. It involves an explicit type cast.
+
+3. What is meant by the terms managed resource and unmanaged resource in .NET
+Managed Resource
+Definition: Managed resources are those that are handled by the .NET runtime's garbage collector. They include all objects created from .NET classes.
+Examples: Instances of .NET classes like String, Array, List, etc.
+Unmanaged Resource
+Definition: Unmanaged resources are not handled by the .NET runtime. They include resources that require explicit cleanup, such as file handles, database connections, network connections, and COM objects.
+Examples: File streams, database connections, OS handles.
+
+
+4. Whats the purpose of Garbage Collector in .NET?
+Automatic Memory Allocation and Deallocation: The GC allocates memory for new objects and deallocates memory for objects that are no longer needed, which helps prevent memory leaks.
+Optimize Memory Usage: By reclaiming memory from objects that are no longer reachable or used, the GC helps optimize memory usage.
+Handle Object Lifetime: The GC tracks object references and ensures that objects are kept in memory as long as they are accessible from the application. When they are no longer accessible, the GC marks them for collection.
+Improve Application Performance: By managing memory efficiently, the GC can improve application performance by reducing the overhead associated with manual memory management.
+
+
+
+

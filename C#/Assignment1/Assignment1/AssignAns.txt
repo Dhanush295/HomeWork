@@ -1,0 +1,176 @@
+﻿
+Test your Knowledge
+1. What type would you choose for the following “numbers”?
+    A person’s telephone number
+string PhNo = "5628377729";
+
+    A person’s height
+double height = 5.9; // example in feet
+
+    A person’s age
+int age = 30;
+
+    A person’s gender (Male, Female, Prefer Not To Answer)
+enum Gender { Male, Female, PreferNotToAnswer }
+Gender gender = Gender.Male;
+
+    A person’s salary
+decimal salary = 50000.00m;
+
+    A book’s ISBN
+string isbn = "978-3-16-148410-0";
+
+    A book’s price
+decimal price = 29.99m;
+
+A book’s shipping weight
+double shippingWeight = 1.5;
+A country’s population
+long population = 331002651;
+
+The number of stars in the universe
+ulong numberOfStars = 10000000000000000000;
+
+The number of employees in each of the small or medium businesses in the
+United Kingdom (up to about 50,000 employees per business)
+int numberOfEmployees = 50000;
+
+Output the number of employees
+Console.WriteLine("The number of employees is: " + numberOfEmployees);
+
+
+
+2.What are the difference between value type and reference type variables? What is
+boxing and unboxing?
+
+Value Type
+Storage: Value types directly contain their data. The memory is allocated on the stack.
+Examples: int, float, double, char, struct, enum.
+Behavior: When a value type variable is assigned to another variable, a copy of the value is made. They are independent of each other.
+Reference Type
+Storage: Reference types store references to their data (objects). The actual data is stored on the heap, and the reference is stored on the stack.
+Examples: class, string, array, delegate, interface.
+Behavior: When a reference type variable is assigned to another variable, both variables point to the same object in memory. Changes made through one variable reflect in the other.
+Boxing
+Definition: Boxing is the process of converting a value type to a reference type by wrapping the value inside an object or any interface type implemented by this value type.
+Unboxing
+Definition: Unboxing is the process of extracting the value type from the object. It involves an explicit type cast.
+
+3. What is meant by the terms managed resource and unmanaged resource in .NET
+Managed Resource
+Definition: Managed resources are those that are handled by the .NET runtime's garbage collector. They include all objects created from .NET classes.
+Examples: Instances of .NET classes like String, Array, List, etc.
+Unmanaged Resource
+Definition: Unmanaged resources are not handled by the .NET runtime. They include resources that require explicit cleanup, such as file handles, database connections, network connections, and COM objects.
+Examples: File streams, database connections, OS handles.
+
+
+4. Whats the purpose of Garbage Collector in .NET?
+Automatic Memory Allocation and Deallocation: The GC allocates memory for new objects and deallocates memory for objects that are no longer needed, which helps prevent memory leaks.
+Optimize Memory Usage: By reclaiming memory from objects that are no longer reachable or used, the GC helps optimize memory usage.
+Handle Object Lifetime: The GC tracks object references and ensures that objects are kept in memory as long as they are accessible from the application. When they are no longer accessible, the GC marks them for collection.
+Improve Application Performance: By managing memory efficiently, the GC can improve application performance by reducing the overhead associated with manual memory management.
+
+
+
+1. What happens when you divide an int variable by 0?
+
+- Dividing an `int` variable by 0 in C# will result in a `System.DivideByZeroException` at runtime. This is because integer division by zero is not defined and is considered an arithmetic error.
+
+
+
+2. What happens when you divide a double variable by 0?
+
+- Dividing a `double` variable by 0 in C# results in a special value:
+  - Positive infinity (`double.PositiveInfinity`) if the numerator is positive.
+  - Negative infinity (`double.NegativeInfinity`) if the numerator is negative.
+  - `double.NaN` (Not-a-Number) if both numerator and denominator are 0 or if the numerator is NaN.
+
+
+
+3. What happens when you overflow an int variable, that is, set it to a value beyond its range?
+
+- If you assign a value to an `int` variable that exceeds its range (`-2147483648` to `2147483647`), it will wrap around. This behavior is called integer overflow and does not throw an exception by default in C#. Instead, the value wraps around in a modulo fashion.
+
+
+
+4. What is the difference between `x = y++;` and `x = ++y;`?
+
+- y++: Post-increment operator (`++`) increases `y` after assigning its current value to `x`.
+- ++y: Pre-increment operator (`++`) increases `y` before assigning its incremented value to `x`.
+
+
+
+ 5. What is the difference between `break`, `continue`, and `return` when used inside a loop statement?
+
+- `break`: Immediately terminates the loop and proceeds to the next statement after the loop.
+- `continue`: Skips the current iteration of the loop and continues with the next iteration.
+- `return`: Exits the current method (or lambda expression) and returns control to the caller.
+
+6. What are the three parts of a `for` statement and which of them are required?
+
+- The three parts of a `for` statement in C# are:
+  1. Initialization (`int i = 0;`): Initializes loop control variable(s).
+  2. Condition (`i < 10;`): Specifies the condition under which the loop executes.
+  3. Iteration (`i++;`): Increments or updates loop control variable(s).
+
+- Among these, only the condition part (`i < 10;`) is required. The other two parts (initialization and iteration) are optional.
+
+
+
+7. What is the difference between the `=` and `==` operators?
+
+ Assignment operator. Assigns the value on the right-hand side to the variable or property on the left-hand side.
+
+
+
+ Equality operator. Compares two values for equality. Returns `true` if the values are equal, otherwise `false`.
+
+
+8. Does the following statement compile? `for (; true; ) ;`
+
+- Yes, the statement `for (; true; ) ;` will compile. It's a valid `for` loop with an empty body (`;`). This loop will run indefinitely because the condition `true` is always true.
+
+9. What does the underscore `_` represent in a switch expression?
+
+- In a switch expression in C#, the underscore `_` is a discard pattern that matches any value and discards it. It is useful when you want to handle only specific cases and ignore others.
+
+
+
+
+10. What interface must an object implement to be enumerated over by using the `foreach` statement?
+
+- An object must implement the `System.Collections.IEnumerable` or `System.Collections.Generic.IEnumerable<T>` interface to be enumerated over using the `foreach` statement in C#. This interface provides the `GetEnumerator()` method that returns an `IEnumerator` or `IEnumerator<T>`, respectively, which the `foreach` loop uses to iterate over the elements.
+
+
+These explanations should clarify each question thoroughly. If you have any more questions or need further explanation on any topic, feel free to ask!
+
+
+
+
+
+
+1. When to use String vs. StringBuilder in C#?
+String: Use string when you have an immutable sequence of characters.
+In other words, once a string object is created, it cannot be modified.
+Operations like concatenation (+ operator), Substring, and Replace create new string instances rather than modifying existing ones.
+StringBuilder: Use StringBuilder when you need to perform many modifications (like appending, inserting, or removing characters) on a string. StringBuilder is mutable and provides better performance for these operations because it doesn't create new instances every time you modify it.
+
+2. What is the base class for all arrays in C#?
+The base class for all arrays in C# is System.Array. All array types (such as int[], string[], etc.) inherit from System.Array.
+
+
+3. How do you sort an array in C#?
+You can sort an array in C# using the Array.Sort() method for simple arrays or List<T>.Sort() for lists. Both methods use the QuickSort algorithm and sort elements in ascending order by default.
+
+4. What property of an array object can be used to get the total number of elements in an array?
+The Length property of an array object can be used to get the total number of elements in the array. It returns an int representing the total number of elements in the array.
+
+5. Can you store multiple data types in System.Array?
+Yes, you can store multiple data types in a System.Array. Since arrays in C# are of type System.Array, they can store elements of any type, including value types (like int, double, etc.) and reference types (like string, custom classes, etc.). However, once an array is created, it can only store elements of the same type throughout its lifetime.
+
+6. What’s the difference between System.Array.CopyTo() and System.Array.Clone()?
+System.Array.CopyTo(): This method copies elements from one array to another existing array. It allows you to specify the starting index in the destination array where copying begins.
+
+System.Array.Clone(): This method creates a shallow copy of the array. It returns a new array object (of type object) that is a copy of the original array. Changes to the elements of the cloned array do not affect the original array, but both arrays refer to the same objects.
+
