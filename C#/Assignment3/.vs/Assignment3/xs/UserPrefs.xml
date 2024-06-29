@@ -1,0 +1,28 @@
+﻿<Properties StartupConfiguration="{7E132C5E-A344-4D36-A7A1-59BD1B50F361}|Default">
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.Assignment3 PreferredExecutionTarget="MonoDevelop.Default" FirstBuild="True" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assignment3/MyList.cs">
+    <Files>
+      <File FileName="Assignment3/Program.cs" Line="15" Column="15" />
+      <File FileName="Assignment3/MyStack.cs" Line="9" Column="10" />
+      <File FileName="Assignment3/MyList.cs" Line="9" Column="10" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Assignment3" expanded="True">
+            <Node name="Assignment3" expanded="True">
+              <Node name="Repositories" expanded="True" />
+              <Node name="MyList.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+</Properties>
